@@ -41,7 +41,7 @@ app.use(express.json({
 
 app.route('/').get(async (req,res)=>{
 
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] })
     const page = await browser.newPage();
 
     const client = await page.target().createCDPSession();
