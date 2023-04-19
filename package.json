@@ -1,0 +1,31 @@
+{
+  "name": "prompt-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kyleschneiderx/prompt-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kyleschneiderx/prompt-server/issues"
+  },
+  "homepage": "https://github.com/Kyleschneiderx/prompt-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "google-spreadsheet": "^3.3.0",
+    "moment": "^2.29.4",
+    "node-cron": "^3.0.2",
+    "nodemon": "^2.0.22",
+    "puppeteer": "^19.7.2",
+    "xlsx": "^0.18.5"
+  }
+}
