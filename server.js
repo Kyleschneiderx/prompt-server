@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-var CronJob = require('cron').CronJob;
 require('dotenv').config()
 var moment = require('moment');
 const puppeteer = require('puppeteer');
