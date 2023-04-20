@@ -16,30 +16,9 @@ const doc = new GoogleSpreadsheet(process.env.GOOGLE_DOC);
 
 
 
-cron.schedule('0 9,12,18 * * *', async () => {
-    console.log('Running the tasks at 9am, 12:30pm and 6:30pm every day');
-    // add your task code here
-    try{
-
-
-    }
-    catch(err){
-        console.log(err)
-    }
-});
-
-app.use(cors());
-
-
-app.use(express.json({
-    verify: (req, res, buf) => {
-      req.rawBody = buf
-    }
-}));
-
-
-app.route('/').get(async (req,res)=>{
-
+cron.schedule('30 18 * * *', async () => {
+    // run your task here
+    console.log('Running task every day at 6:30 pm');
     const browser = await puppeteer.launch({ args: ['--no-sandbox'] })
     const page = await browser.newPage();
 
@@ -277,7 +256,19 @@ const patient = await page.$("#q-app > div > div.q-page-container > main > div >
     res.status(400).send(err.message)
   }
 
+});
 
+app.use(cors());
+
+
+app.use(express.json({
+    verify: (req, res, buf) => {
+      req.rawBody = buf
+    }
+}));
+
+
+app.route('/').get(async (req,res)=>{
 
 })
 
