@@ -16,7 +16,7 @@ const doc = new GoogleSpreadsheet(process.env.GOOGLE_DOC);
 
 
 
-cron.schedule('30 18 * * *', async () => {
+cron.schedule('0 5 * * *', async () => {
     // run your task here
     console.log('Running task every day at 6:30 pm');
     const browser = await puppeteer.launch({ args: ['--no-sandbox'] })
