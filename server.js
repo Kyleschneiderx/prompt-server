@@ -60,7 +60,7 @@ cron.schedule('0 5 * * *', async () => {
 
   await page.waitForTimeout(10000)
 
-    await page.goto('https://go.promptemr.com/reports');
+    await page.goto('https://newbeta.go.promptemr.com/reports');
 
     await page.waitForTimeout(10000)
 
@@ -217,7 +217,7 @@ const patient = await page.$("#q-app > div > div.q-page-container > main > div >
         for(let k=0; k < PTdata.length; k++){
             if(ARdata[i]['Patient Account Number'] === PTdata[k]['Account Number']){
                 if(PTdata[k]['MobilePhone']){
-                    combined.push({"DateAdded": formattedDate,...ARdata[i], "phoneNumber": PTdata[k]['MobilePhone']})
+                    combined.push({"DateAdded": formattedDate, ...ARdata[i], "phoneNumber": PTdata[k]['MobilePhone']})
                 }else{
                     combined.push({"DateAdded": formattedDate, ...ARdata[i], "phoneNumber": PTdata[k]['HomePhone']})
                 }
