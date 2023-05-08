@@ -30,7 +30,7 @@ cron.schedule('0 5 * * *', async () => {
 
   
   // Navigate to the webpage that contains the file you want to download
-    await page.goto('https://auth.promptemr.com/login');
+    await page.goto('https://newbeta.go.promptemr.com/');
 
 
 
@@ -120,7 +120,7 @@ cron.schedule('0 5 * * *', async () => {
 
   await page.waitForTimeout(5000)
 
-  await page.goto('https://go.promptemr.com/patients');
+  await page.goto('https://newbeta.go.promptemr.com/patients');
 
   await page.waitForSelector("#q-app > div > div.q-page-container > main > div > div.col.list.column.no-wrap.full-height.p-listview > div.q-pa-sm.q-card > div:nth-child(1)")
   await page.waitForSelector("#q-app > div > div.q-page-container > main > div > div.col.list.column.no-wrap.full-height.p-listview > div.q-pa-sm.q-card > div:nth-child(1) > button:nth-child(1)")
