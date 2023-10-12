@@ -8,6 +8,7 @@ const path = require('path')
 const fs = require('fs/promises')
 const cron = require('node-cron');
 const xlsx = require('xlsx')
+const { getDataFromPrompt } = require('./utils/promptData')
 
 
 const { GoogleSpreadsheet } = require('google-spreadsheet');
@@ -268,7 +269,9 @@ app.use(express.json({
 }));
 
 
-app.route('/').get(async (req,res)=>{
+app.route('/test').get(async (req,res)=>{
+  await getDataFromPrompt()
+  res.status(200).send('<h4>Its done</h4>')
 
 })
 
