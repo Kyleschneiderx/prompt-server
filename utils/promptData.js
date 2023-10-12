@@ -642,7 +642,7 @@ const combine = async () =>{
     
         await doc.loadInfo();
     
-        const firstSheet = await doc.sheetsByIndex[6]
+        const firstSheet = await doc.sheetsByIndex[1]
     
         const numRows = await firstSheet.rowCount;
         const range = `A2:F${numRows}`;
