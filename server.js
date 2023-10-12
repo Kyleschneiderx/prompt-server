@@ -21,12 +21,6 @@ cron.schedule('0 8 * * 1', async () => {
 });
 
 
-cron.schedule('*/10 * * * *', async () => {
-  await getDataFromPrompt()
-})
-
-
-
 // cron.schedule('0 5 * * *', async () => {
 //     // run your task here
 //     console.log('Running task every day at 6:30 pm');
